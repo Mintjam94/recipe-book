@@ -25,7 +25,6 @@ const Login = () => {
 
     const handleClick = (e) => {
         setInputSelect(e.target.name);
-        console.log(e.target.name);
     };
 
     return (
@@ -36,6 +35,7 @@ const Login = () => {
                     <>
                         <input
                             name="username"
+                            type="text"
                             value={formValues.username}
                             onChange={handleChange}
                             placeholder="Username"
@@ -53,6 +53,7 @@ const Login = () => {
                     <>
                         <input
                             name="email"
+                            type="email"
                             value={formValues.email}
                             onChange={handleChange}
                             placeholder="Email"
@@ -68,6 +69,7 @@ const Login = () => {
                 )}
                 <input
                     name="password"
+                    type="password"
                     value={formValues.password}
                     onChange={handleChange}
                     placeholder="Password"

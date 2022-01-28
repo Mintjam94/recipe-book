@@ -6,7 +6,7 @@ const initialFormValues = {
     email: "",
 };
 
-function SignUp() {
+const SignUp = () => {
     const [formValues, setFormValues] = useState(initialFormValues);
 
     const handleChange = (e) => {
@@ -28,26 +28,29 @@ function SignUp() {
             <form onSubmit={handleSubmit}>
                 <input
                     name="username"
+                    type="text"
                     value={formValues.username}
                     onChange={handleChange}
                     placeholder="Username"
                 />
                 <input
-                    name="password"
-                    value={formValues.password}
-                    onChange={handleChange}
-                    placeholder="Password"
-                />
-                <input
                     name="email"
+                    type="email"
                     value={formValues.email}
                     onChange={handleChange}
                     placeholder="Email"
+                />
+                <input
+                    name="password"
+                    type="password"
+                    value={formValues.password}
+                    onChange={handleChange}
+                    placeholder="Password"
                 />
                 <button type="submit">Login</button>
             </form>
         </section>
     );
-}
+};
 
 export default SignUp;
